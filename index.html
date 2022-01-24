@@ -4,10 +4,20 @@
     body {
         background-color: #F9F4EF;
         margin: 20;
-        color: #030300;
+        color: hsl(60, 100%, 1%);
         font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4;
+        margin: 0;
         }
 
+    label {
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        }
+
+<<<<<<< HEAD
     label {
         display: flex;
         align-items: center;
@@ -15,6 +25,24 @@
         margin-bottom: 0.5rem;
     }
 
+=======
+    input,
+    button,
+    select,
+    textarea {
+        margin: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
+    form {
+        padding: 2.5rem 0.625rem;
+        border-radius: 0.25rem;
+    }
+
+    
+>>>>>>> bc09183d1dc42fd157b5422cb2c6edd702f8070e
     #title {
         font-size: 38px;
         color: #030300;
@@ -31,11 +59,38 @@
     #survey-form {
         width: 80%;
         margin: 3.125rem auto 0 auto;
+        background-color: rgb(196, 200, 235);
+        border-radius: 1%
     }
+
     #label-name {
         text-align: left;
     }
 
+    #radiobutton,
+    #checkbox--style {
+        display: inline-block;
+        margin-right: 0.625rem;
+        min-height: 1.25rem;
+        min-width: 1.25rem;
+    }
+
+    #textarea--style {
+        min-height: 120px;
+        width: 100%;
+        padding: 0.625rem;
+        resize: vertical;
+    }
+
+
+    #submit {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: rgb(84, 199, 38);
+            border-radius: 2px;
+            cursor: pointer;
+    }
     .text-center {
         text-align: center;
     }
@@ -97,6 +152,7 @@
     <title>Pizza Delivery Form</title>
 </head>
 <body>
+<<<<<<< HEAD
     <h1 id="title" class="text-center">Pizza Delivery Form</h1>
     <p id="description" class="text-center">Here you can order your Nr. 1 Pizza in town!</p>
     <form id="survey-form">
@@ -162,6 +218,51 @@
         <div class="form-group">
             <button type="submit" id="submit" class="submit-button">Submit</button>
         </div>
+=======
+    <h1 id="title" class="text-center">Pizza Delivery</h1>
+    <p id="description" class="text-center">Order your pizza here!</p>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name: </label>
+        <input type="text" id="name" placeholder="Name" required>
+        <br>
+        <label for="email" id="email-label">E-Mail: </label>
+        <input type="email" id="email" placeholder="email@domain.de" required>
+        <br>
+        <label for="number" id="number-label">Nummer: </label>
+        <input type="number" id="number" placeholder="Number between 0 and 10000" pattern="[0-9]" min="0" max="10000">
+        <br>
+        <label for="dropdown" id="dropdown-label">Choose a pizza: </label>
+        <select type="dropdown" id="dropdown">
+            <option value="Margeritha">Margeritha</option>
+            <option value="Funghi">Funghi</option>
+            <option value="Quattro Formaggio">Quattro Formaggio</option>
+        </select>
+        <br>
+        <fieldset>
+            <legend>Pizza Style</legend>
+            <input type="radio" id="radiobutton" name="pizzastyle" value="American Pizza">
+            <label for="American Pizza">American Pizza</label>
+            <br>
+            <input type="radio" id="radiobutton" name="pizzastyle" value="Italian Pizza">
+            <label for="Italian Pizza">Italian Pizza</label>
+        </fieldset>
+        <fieldset>
+            <legend>additional componnents</legend>
+            <input type="checkbox" id="checkbox--style" name="extra cheese" value="extra cheese">
+            <label for="extra cheese">extra cheese</label>
+            <br>
+            <input type="checkbox" id="checkbox--style" name="basil" value="basil">
+            <label for="basil">basil</label>
+            <br>
+            <input type="checkbox" id="checkbox--style" name="salami" value="salami">
+            <label for="salami">salami</label>
+        </fieldset>
+        <br>
+        <label for="textarea" id="textarea--style">additional comments</label>
+        <textarea>additional comments</textarea>
+        <br>
+        <button type="submit" id="submit">Submit</button>
+>>>>>>> bc09183d1dc42fd157b5422cb2c6edd702f8070e
     </form>
 </body>
 </html>
